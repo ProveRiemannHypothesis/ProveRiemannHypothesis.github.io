@@ -93,6 +93,10 @@
 }
 
 .footer-notes { min-width: 0; }
+footer { display: grid; grid-template-columns: auto minmax(0, 700px) auto; row-gap: 14px; }
+footer #run-date { white-space: nowrap; }
+.site-credit { grid-column: 1 / -1; justify-self: center; }
+@media (max-width: 760px) { footer { grid-template-columns: minmax(0, 1fr); } }
 footer .site-history { margin-top: .55rem; }
 .site-history code { overflow-wrap: anywhere; }
 .download-index { max-width: 1160px; padding-top: 3rem; }
