@@ -1,27 +1,400 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="refresh" content="0; url=http://106.14.11.164/">
-  <link rel="canonical" href="http://106.14.11.164/">
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Verifying a Riemann Hypothesis Formalization in Lean</title>
-  <meta name="description" content="Follow the live compilation and verification of the published Riemann Hypothesis Lean formalization.">
-  <script>window.location.replace("http://106.14.11.164/");</script>
-  <style>
-    body { margin: 0; padding: 2rem; font: 1rem/1.7 system-ui, sans-serif; color: #15263c; background: #f5f7fa; }
-    main { max-width: 42rem; margin: 12vh auto; }
-    h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; }
-    a { color: #315cf5; text-underline-offset: .2em; }
-  </style>
+  <meta name="description" content="Compilation results, the verification machine, and proof-audit records for the published Riemann Hypothesis Lean formalization.">
+  <link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/style.css"><script defer="" src="/app.js"></script>
 </head>
 <body>
+  <header class="topbar"><a class="brand" href="/" aria-label="RH verification home"><span class="mark">ζ</span> RH / VERIFY</a><div class="connection"><span id="connection-dot" class="dot archived"></span><span id="connection">Archived verification</span></div></header>
   <main>
-    <h1>Verifying a Riemann Hypothesis Formalization in Lean</h1>
-    <p>Redirecting to the live verification dashboard.</p>
-    <p>If you are not redirected automatically, <a href="http://106.14.11.164/">open the live dashboard</a>.</p>
+    <section class="hero" id="theorem-statement" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">INDEPENDENT REPRODUCTION</p>
+        <h1 id="page-title">Verifying a Riemann Hypothesis<br class="desktop"> Formalization in <em>Lean.</em></h1>
+        <p class="intro statement-text">The main theorem in this Lean project states that every nontrivial zero of the Riemann zeta function has real part 1/2. <strong>This is the classical Riemann hypothesis.</strong></p>
+        <details class="statement-translation" lang="zh-Hans">
+          <summary>中文原文</summary>
+          <p>是。这份 Lean 项目的主定理断言，黎曼 ζ 函数的每个非平凡零点的实部都等于 1/2。这正是经典黎曼猜想。</p>
+        </details>
+        <nav class="hero-links" aria-label="Verification and discussion">
+          <a href="#statement-check">Statement check</a>
+          <a href="/artifacts/remark.pdf" target="_blank" rel="noopener">Original announcement</a>
+          <a href="/artifacts/verification.log.gz" rel="noopener" download="">Full verification log (.gz)</a>
+          <a href="https://www.zhihu.com/question/2107239235015263538/answer/2107246671046383421" hreflang="zh" target="_blank" rel="noopener noreferrer">Discussion on Zhihu (in Chinese)</a>
+        <a href="/downloads.html">All downloads</a></nav>
+      </div>
+      <div class="equation" aria-hidden="true"><span>ζ(s) = 0</span><small>Re(s) = ½</small><div>FOR NONTRIVIAL ZEROS</div></div>
+    </section>
+    <section class="external-verification" id="independent-verification" aria-labelledby="sutherland-title">
+      <div>
+        <h2 id="sutherland-title"><a href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener">Independent verification by Andrew Sutherland (MIT)</a></h2>
+        <p>Sutherland reports that two independent proof checkers, nanoda and con-leche, accepted the full exported proof. Using con-leche, he also checked all five final theorems against separately specified statements.</p>
+      </div>
+      <div class="external-evidence">
+        <p>Report updated <time datetime="2026-11-20T22:05:00Z">20 Nov 2026, 22:05 UTC</time></p>
+        <nav aria-label="Andrew Sutherland’s verification logs">
+          <a href="https://math.mit.edu/~drew/grh/nanoda.log" target="_blank" rel="noopener">nanoda run log</a>
+          <a href="https://math.mit.edu/~drew/grh/con-leche-compare.log" target="_blank" rel="noopener">con-leche comparison log</a>
+        </nav>
+      </div>
+    </section>
+    <section class="run-panel" aria-labelledby="run-title"><div class="run-heading"><div><p class="eyebrow">VERIFICATION RUN</p><h2 id="run-title">Verification run finished</h2></div><span class="pill complete" id="run-status">complete</span></div><p id="run-message" class="run-message">Compilation, final-theorem type and axiom checks, and source integrity checks passed. Kernel replay skipped at user request.</p><ol class="pipeline" id="pipeline"><li class="complete"><div class="step-line"></div><span>Download</span></li><li class="complete"><div class="step-line"></div><span>Inspect source</span></li><li class="complete"><div class="step-line"></div><span>Prepare Lean</span></li><li class="complete"><div class="step-line"></div><span>Compile</span></li><li class="complete"><div class="step-line"></div><span>Audit proof</span></li><li class="complete"><div class="step-line"></div><span>Results</span></li></ol><div class="source-progress" id="source-progress"><div class="source-progress-heading"><span>Project modules compiled</span><strong id="source-progress-count">175,187 / 175,187</strong></div><progress id="source-progress-meter" max="175187" aria-label="Compilation progress against the fixed original source target" value="175187" aria-valuetext="175,187 of 175,187 source modules compiled"></progress><div class="source-progress-meta"><span id="source-progress-percent">100.0% of the fixed source target</span><span id="source-progress-finish"></span></div><p id="source-progress-explanation">Final count of project modules with compiled Lean artifacts.</p></div><div class="run-meta"><span id="elapsed">Elapsed 8h 22m 15s</span><span id="updated">Last event <time datetime="2026-11-20T23:45:15+00:00" data-format="clock">23:45:15 UTC</time></span></div></section>
+    <section class="metrics" aria-label="Verification summary"><article><span>Archive parts</span><strong id="parts-count">14 <small>/ 14</small></strong><p id="download-size">228.2 MiB received</p></article><article><span>Fixed source target</span><strong id="source-count">175,187</strong><p id="source-note">Original source preserved</p></article><article><span id="build-metric-label">Compilation time</span><strong class="eta-value" id="build-count">6h 58m</strong><p id="build-note">183,903 Lake jobs completed</p></article><article><span>Proof audit</span><strong class="word" id="audit-status">passed</strong><p id="audit-note">Types, axioms &amp; hashes passed</p></article></section>
+    <section class="machine-panel" id="verification-machine" aria-labelledby="machine-title">
+      <div class="machine-heading">
+        <div><h2 id="machine-title">Verification machine</h2><p id="machine-description">CPU, memory and I/O are from the compilation sample. The memory peak covers the full build. Storage was measured on the original server at migration.</p></div>
+        <div class="machine-source"><span id="machine-freshness" class="">Build sample 21 Nov 2026, 00:15:14 (UTC+8)</span>
+          <a id="machine-sample-link" href="/artifacts/archive/machine-sample.json">Recorded sample</a>
+        </div>
+      </div>
+      <div class="machine-grid">
+        <article class="machine-card"><div class="machine-label"><h3>CPU</h3><span id="machine-cpu-capacity">55.5% used</span></div><strong id="machine-cpu-value">128 vCPU</strong><meter id="machine-cpu-meter" min="0" max="100" value="55.5" aria-label="CPU utilization" aria-valuetext="55.5%"></meter><p id="machine-cpu-detail">0.0% I/O wait</p></article>
+        <article class="machine-card"><div class="machine-label"><h3>Memory</h3><span id="machine-memory-total">36.0 GiB used</span></div><strong id="machine-memory-value" title="243.8 GiB reported by Linux">244 GiB</strong><meter id="machine-memory-meter" min="0" max="100" value="14.8" aria-label="Memory utilization" aria-valuetext="14.8%"></meter><p id="machine-memory-detail">207.8 GiB available · 14.8% used</p><div class="memory-peak"><div class="memory-peak-row"><span>Build memory peak</span><strong id="machine-memory-peak">210.0 GiB</strong></div><p id="machine-memory-peak-detail">Includes file cache · Limit 210.0 GiB. Saved record.</p><a id="machine-memory-peak-record" href="/artifacts/telemetry/memory-peak.json" target="_blank">View peak record</a></div></article>
+        <article class="machine-card">
+          <div class="machine-label"><h3>Site storage</h3><span id="machine-storage-total">2.00 TiB disk</span></div>
+          <strong id="machine-storage-value">1.17 TiB used</strong>
+          <meter id="machine-storage-meter" min="0" max="100" value="62" aria-label="Filesystem utilization" aria-valuetext="62.0%"></meter>
+          <p id="machine-storage-detail" title="Available space excludes reserved blocks.">1.97 TiB filesystem · 737.8 GiB available · 62% used</p>
+          <p id="machine-storage-time">Recorded 21 Nov 2026, 15:28:01 (UTC+8) · <a href="/artifacts/archive/storage-at-migration.json">Storage record</a></p>
+        </article>
+      </div>
+      <dl class="machine-extra">
+        <div><dt>Load average · 1 / 5 / 15 min</dt><dd id="machine-load">59.03 / 58.94 / 55.94</dd></div>
+        <div><dt>Disk read</dt><dd id="machine-disk-read">0 B/s</dd></div>
+        <div><dt>Disk write</dt><dd id="machine-disk-write">457.8 KiB/s</dd></div>
+        <div><dt>Server uptime</dt><dd id="machine-uptime">1h 7m</dd></div>
+      </dl>
+    </section>
+    <section class="workspace"><article class="log-panel"><div class="section-heading"><div><p class="eyebrow">COMPILER &amp; VERIFICATION OUTPUT</p><h2>Verification log</h2></div></div><div class="terminal-bar"><span class="terminal-label">verification.log</span><span id="log-lines">Latest output</span></div><pre id="log" tabindex="0" aria-label="Verification log">[2026-11-20T22:31:04+00:00] warning: src/Development/WeilBound/CoreStatements/PadicHodgeComparison/EtaleCohomologyComparison/TeichmullerRootsUnity/RootsUnityPullback/IsMuMmG.lean:47:82: Variable name `B₀` is not explicitly referenced.
+[2026-11-20T22:31:04+00:00] 
+[2026-11-20T22:31:04+00:00] Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+[2026-11-20T22:31:04+00:00]   [apply] _B₀
+[2026-11-20T22:31:04+00:00] 
+[2026-11-20T22:31:04+00:00] Note: This linter can be disabled with `set_option linter.unusedVariables false`
+[2026-11-20T22:31:04+00:00] warning: src/Development/WeilBound/CoreStatements/PadicHodgeComparison/EtaleCohomologyComparison/TeichmullerRootsUnity/RootsUnityPullback/IsMuMmG.lean:47:87: Variable name `φ` is not explicitly referenced.
+[2026-11-20T22:31:04+00:00] 
+[2026-11-20T22:31:04+00:00] Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+[2026-11-20T22:31:04+00:00]   [apply] _φ
+[2026-11-20T22:31:04+00:00] 
+[2026-11-20T22:31:04+00:00] Note: This linter can be disabled with `set_option linter.unusedVariables false`
+[2026-11-20T22:31:05+00:00] ✔ [183881/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.CstSmooth2 (3.2s)
+[2026-11-20T22:31:06+00:00] ✔ [183882/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.TeichmullerRootsUnity.EndExOf (3.9s)
+[2026-11-20T22:31:08+00:00] ✔ [183883/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.OutBridge (2.9s)
+[2026-11-20T22:31:09+00:00] ✔ [183884/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.TeichmullerRootsUnity.EndEx (3.2s)
+[2026-11-20T22:31:10+00:00] ✔ [183885/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.TeichmullerRootsUnity.BInEx (19s)
+[2026-11-20T22:31:12+00:00] ✔ [183886/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.CstSmoothOfSide (3.1s)
+[2026-11-20T22:31:17+00:00] ✔ [183887/183903] Built Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.Closed (5.3s)
+[2026-11-20T22:31:24+00:00] ✔ [183888/183903] Built Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.TeichmullerRootsUnity.PinFixed (20s)
+[2026-11-20T22:31:33+00:00] ✔ [183889/183903] Built Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.CIn (8.9s)
+[2026-11-20T22:31:40+00:00] ✔ [183890/183903] Built Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.SmoothModelCrystalline (7.2s)
+[2026-11-20T22:31:53+00:00] ✔ [183891/183903] Built Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.GeometricRealizationOfWeightOne (9.1s)
+[2026-11-20T22:32:03+00:00] ✔ [183892/183903] Built Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.WeightOneGeometricRealization (9.0s)
+[2026-11-20T22:32:12+00:00] ✔ [183893/183903] Built Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GaloisRepresentationsOfThetaLift (9.0s)
+[2026-11-20T22:32:22+00:00] ✔ [183894/183903] Built Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.RowSrc (9.4s)
+[2026-11-20T22:32:41+00:00] ✔ [183895/183903] Built Development.AutomorphicArithmetic.CharacterBoxes.MainConclusion (19s)
+[2026-11-20T22:32:41+00:00] ✔ [183896/183903] Built Development.AutomorphicArithmetic.AutomorphicVarieties.SmallClassNumbers.CorGKOf (19s)
+[2026-11-20T22:33:08+00:00] ✔ [183898/183903] Built Supplements.Kernels.MainTheorems (25s)
+[2026-11-20T22:33:27+00:00] ✔ [183899/183903] Built Supplements.Kernels.MainTheoremsCritical (19s)
+[2026-11-20T22:33:46+00:00] ✔ [183900/183903] Built Supplements.Kernels.MainTheoremsAll (18s)
+[2026-11-20T22:34:14+00:00] ✔ [183902/183903] Built Main (24s)
+[2026-11-20T22:34:15+00:00] Build completed successfully (183903 jobs).
+[2026-11-20T22:34:15+00:00] Command exited with code 0: /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake --no-ansi --keep-toolchain build
+[2026-11-20T22:34:15+00:00] Build passed. Checking the five final theorem types and their transitive axiom dependencies.
+[2026-11-20T22:34:15+00:00] $ /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean
+[2026-11-20T22:34:50+00:00] def RiemannHypothesis : Prop :=
+[2026-11-20T22:34:50+00:00] ∀ (s : Complex),
+[2026-11-20T22:34:50+00:00]   @Eq.{1} Complex (riemannZeta s) (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T22:34:50+00:00]     Not
+[2026-11-20T22:34:50+00:00]         (∃ n,
+[2026-11-20T22:34:50+00:00]           @Eq.{1} Complex s
+[2026-11-20T22:34:50+00:00]             (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+[2026-11-20T22:34:50+00:00]               (@Neg.neg.{0} Complex Complex.instNeg
+[2026-11-20T22:34:50+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 2)
+[2026-11-20T22:34:50+00:00]                   (@instOfNatAtLeastTwo.{0} Complex (nat_lit 2) Complex.instNatCast RiemannHypothesis._proof_1)))
+[2026-11-20T22:34:50+00:00]               (@HAdd.hAdd.{0, 0, 0} Complex Complex Complex (@instHAdd.{0} Complex Complex.instAdd)
+[2026-11-20T22:34:50+00:00]                 (@Nat.cast.{0} Complex Complex.instNatCast n)
+[2026-11-20T22:34:50+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))))) →
+[2026-11-20T22:34:50+00:00]       @Ne.{1} Complex s (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)) →
+[2026-11-20T22:34:50+00:00]         @Eq.{1} Real s.re
+[2026-11-20T22:34:50+00:00]           (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T22:34:50+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T22:34:50+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T22:34:50+00:00]               (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannHypothesis._proof_1)))
+[2026-11-20T22:34:50+00:00] def RiemannZetaZerosOnLine : Prop :=
+[2026-11-20T22:34:50+00:00] ∀ (s : Complex),
+[2026-11-20T22:34:50+00:00]   @Eq.{1} Complex (riemannZeta s) (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T22:34:50+00:00]     Not
+[2026-11-20T22:34:50+00:00]         (∃ n,
+[2026-11-20T22:34:50+00:00]           @Eq.{1} Complex s
+[2026-11-20T22:34:50+00:00]             (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+[2026-11-20T22:34:50+00:00]               (@Neg.neg.{0} Complex Complex.instNeg
+[2026-11-20T22:34:50+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 2)
+[2026-11-20T22:34:50+00:00]                   (@instOfNatAtLeastTwo.{0} Complex (nat_lit 2) Complex.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T22:34:50+00:00]               (@HAdd.hAdd.{0, 0, 0} Complex Complex Complex (@instHAdd.{0} Complex Complex.instAdd)
+[2026-11-20T22:34:50+00:00]                 (@Nat.cast.{0} Complex Complex.instNatCast n)
+[2026-11-20T22:34:50+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))))) →
+[2026-11-20T22:34:50+00:00]       @Ne.{1} Complex s (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)) →
+[2026-11-20T22:34:50+00:00]         @Eq.{1} Real s.re
+[2026-11-20T22:34:50+00:00]           (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T22:34:50+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T22:34:50+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T22:34:50+00:00]               (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T22:34:50+00:00] def DirichletLNonvanishingRightOfHalf : Prop :=
+[2026-11-20T22:34:50+00:00] ∀ (N : Nat) [inst : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) N]
+[2026-11-20T22:34:50+00:00]   (χ :
+[2026-11-20T22:34:50+00:00]     @DirichletCharacter.{0} Complex
+[2026-11-20T22:34:50+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]       N)
+[2026-11-20T22:34:50+00:00]   (s : Complex),
+[2026-11-20T22:34:50+00:00]   @LT.lt.{0} Real Real.instLT
+[2026-11-20T22:34:50+00:00]       (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T22:34:50+00:00]         (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T22:34:50+00:00]         (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T22:34:50+00:00]           (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T22:34:50+00:00]       s.re →
+[2026-11-20T22:34:50+00:00]     Or
+[2026-11-20T22:34:50+00:00]         (@Ne.{1}
+[2026-11-20T22:34:50+00:00]           (@DirichletCharacter.{0} Complex
+[2026-11-20T22:34:50+00:00]             (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]               (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]             N)
+[2026-11-20T22:34:50+00:00]           χ
+[2026-11-20T22:34:50+00:00]           (@OfNat.ofNat.{0}
+[2026-11-20T22:34:50+00:00]             (@DirichletCharacter.{0} Complex
+[2026-11-20T22:34:50+00:00]               (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]                 (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]               N)
+[2026-11-20T22:34:50+00:00]             (nat_lit 1)
+[2026-11-20T22:34:50+00:00]             (@One.toOfNat1.{0}
+[2026-11-20T22:34:50+00:00]               (@DirichletCharacter.{0} Complex
+[2026-11-20T22:34:50+00:00]                 (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]                   (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]                 N)
+[2026-11-20T22:34:50+00:00]               (@MulChar.hasOne.{0, 0} (ZMod N) (@CommRing.toCommMonoid.{0} (ZMod N) (ZMod.commRing N)) Complex
+[2026-11-20T22:34:50+00:00]                 (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]                   (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))))))
+[2026-11-20T22:34:50+00:00]         (@Ne.{1} Complex s (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))) →
+[2026-11-20T22:34:50+00:00]       @Ne.{1} Complex (@DirichletCharacter.LFunction N inst χ s)
+[2026-11-20T22:34:50+00:00]         (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero))
+[2026-11-20T22:34:50+00:00] def DirichletLZerosOnLine : Prop :=
+[2026-11-20T22:34:50+00:00] ∀ (N : Nat) [inst : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) N]
+[2026-11-20T22:34:50+00:00]   (χ :
+[2026-11-20T22:34:50+00:00]     @DirichletCharacter.{0} Complex
+[2026-11-20T22:34:50+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]       N)
+[2026-11-20T22:34:50+00:00]   (s : Complex),
+[2026-11-20T22:34:50+00:00]   @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) s.re →
+[2026-11-20T22:34:50+00:00]     @LT.lt.{0} Real Real.instLT s.re (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+[2026-11-20T22:34:50+00:00]       @Eq.{1} Complex (@DirichletCharacter.LFunction N inst χ s)
+[2026-11-20T22:34:50+00:00]           (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T22:34:50+00:00]         @Eq.{1} Real s.re
+[2026-11-20T22:34:50+00:00]           (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T22:34:50+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T22:34:50+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T22:34:50+00:00]               (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T22:34:50+00:00] def PrimitiveDirichletLZerosOnLine : Prop :=
+[2026-11-20T22:34:50+00:00] ∀ (N : Nat) [inst : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) N]
+[2026-11-20T22:34:50+00:00]   (χ :
+[2026-11-20T22:34:50+00:00]     @DirichletCharacter.{0} Complex
+[2026-11-20T22:34:50+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]       N),
+[2026-11-20T22:34:50+00:00]   @DirichletCharacter.IsPrimitive.{0} Complex
+[2026-11-20T22:34:50+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T22:34:50+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T22:34:50+00:00]       N χ →
+[2026-11-20T22:34:50+00:00]     ∀ (s : Complex),
+[2026-11-20T22:34:50+00:00]       @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) s.re →
+[2026-11-20T22:34:50+00:00]         @LT.lt.{0} Real Real.instLT s.re (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+[2026-11-20T22:34:50+00:00]           @Eq.{1} Complex (@DirichletCharacter.LFunction N inst χ s)
+[2026-11-20T22:34:50+00:00]               (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T22:34:50+00:00]             @Eq.{1} Real s.re
+[2026-11-20T22:34:50+00:00]               (@HDiv.hDiv.{0, 0, 0} Real Real Real
+[2026-11-20T22:34:50+00:00]                 (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T22:34:50+00:00]                 (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T22:34:50+00:00]                 (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T22:34:50+00:00]                   (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T22:34:50+00:00] riemannHypothesis : RiemannHypothesis
+[2026-11-20T22:34:50+00:00] riemannZeta_eq_zero_re : RiemannZetaZerosOnLine
+[2026-11-20T22:34:50+00:00] LFunction_ne_zero_of_half_lt_re : DirichletLNonvanishingRightOfHalf
+[2026-11-20T22:34:50+00:00] LFunction_eq_zero_re : DirichletLZerosOnLine
+[2026-11-20T22:34:50+00:00] LFunction_eq_zero_re_of_isPrimitive : PrimitiveDirichletLZerosOnLine
+[2026-11-20T22:34:50+00:00] 'riemannHypothesis' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T22:34:50+00:00] 'riemannZeta_eq_zero_re' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T22:34:50+00:00] 'LFunction_ne_zero_of_half_lt_re' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T22:34:50+00:00] 'LFunction_eq_zero_re' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T22:34:50+00:00] 'LFunction_eq_zero_re_of_isPrimitive' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T22:34:52+00:00] Command exited with code 0: /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean
+[2026-11-20T22:34:52+00:00] Compilation passed, but the theorem axiom audit requires review. No final verification claim is made.
+[2026-11-20T23:29:51+00:00] Correcting an audit parser false positive: Classical.choice.{u} and Quot.sound.{u} are universe-qualified standard axioms. Compilation results and original Lean sources are unchanged.
+[2026-11-20T23:29:51+00:00] Build passed. Checking the five final theorem types and their transitive axiom dependencies.
+[2026-11-20T23:29:51+00:00] $ /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean
+[2026-11-20T23:30:26+00:00] def RiemannHypothesis : Prop :=
+[2026-11-20T23:30:26+00:00] ∀ (s : Complex),
+[2026-11-20T23:30:26+00:00]   @Eq.{1} Complex (riemannZeta s) (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T23:30:26+00:00]     Not
+[2026-11-20T23:30:26+00:00]         (∃ n,
+[2026-11-20T23:30:26+00:00]           @Eq.{1} Complex s
+[2026-11-20T23:30:26+00:00]             (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+[2026-11-20T23:30:26+00:00]               (@Neg.neg.{0} Complex Complex.instNeg
+[2026-11-20T23:30:26+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 2)
+[2026-11-20T23:30:26+00:00]                   (@instOfNatAtLeastTwo.{0} Complex (nat_lit 2) Complex.instNatCast RiemannHypothesis._proof_1)))
+[2026-11-20T23:30:26+00:00]               (@HAdd.hAdd.{0, 0, 0} Complex Complex Complex (@instHAdd.{0} Complex Complex.instAdd)
+[2026-11-20T23:30:26+00:00]                 (@Nat.cast.{0} Complex Complex.instNatCast n)
+[2026-11-20T23:30:26+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))))) →
+[2026-11-20T23:30:26+00:00]       @Ne.{1} Complex s (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)) →
+[2026-11-20T23:30:26+00:00]         @Eq.{1} Real s.re
+[2026-11-20T23:30:26+00:00]           (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T23:30:26+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T23:30:26+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T23:30:26+00:00]               (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannHypothesis._proof_1)))
+[2026-11-20T23:30:26+00:00] def RiemannZetaZerosOnLine : Prop :=
+[2026-11-20T23:30:26+00:00] ∀ (s : Complex),
+[2026-11-20T23:30:26+00:00]   @Eq.{1} Complex (riemannZeta s) (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T23:30:26+00:00]     Not
+[2026-11-20T23:30:26+00:00]         (∃ n,
+[2026-11-20T23:30:26+00:00]           @Eq.{1} Complex s
+[2026-11-20T23:30:26+00:00]             (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+[2026-11-20T23:30:26+00:00]               (@Neg.neg.{0} Complex Complex.instNeg
+[2026-11-20T23:30:26+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 2)
+[2026-11-20T23:30:26+00:00]                   (@instOfNatAtLeastTwo.{0} Complex (nat_lit 2) Complex.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T23:30:26+00:00]               (@HAdd.hAdd.{0, 0, 0} Complex Complex Complex (@instHAdd.{0} Complex Complex.instAdd)
+[2026-11-20T23:30:26+00:00]                 (@Nat.cast.{0} Complex Complex.instNatCast n)
+[2026-11-20T23:30:26+00:00]                 (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))))) →
+[2026-11-20T23:30:26+00:00]       @Ne.{1} Complex s (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)) →
+[2026-11-20T23:30:26+00:00]         @Eq.{1} Real s.re
+[2026-11-20T23:30:26+00:00]           (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T23:30:26+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T23:30:26+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T23:30:26+00:00]               (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T23:30:26+00:00] def DirichletLNonvanishingRightOfHalf : Prop :=
+[2026-11-20T23:30:26+00:00] ∀ (N : Nat) [inst : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) N]
+[2026-11-20T23:30:26+00:00]   (χ :
+[2026-11-20T23:30:26+00:00]     @DirichletCharacter.{0} Complex
+[2026-11-20T23:30:26+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]       N)
+[2026-11-20T23:30:26+00:00]   (s : Complex),
+[2026-11-20T23:30:26+00:00]   @LT.lt.{0} Real Real.instLT
+[2026-11-20T23:30:26+00:00]       (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T23:30:26+00:00]         (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T23:30:26+00:00]         (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T23:30:26+00:00]           (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T23:30:26+00:00]       s.re →
+[2026-11-20T23:30:26+00:00]     Or
+[2026-11-20T23:30:26+00:00]         (@Ne.{1}
+[2026-11-20T23:30:26+00:00]           (@DirichletCharacter.{0} Complex
+[2026-11-20T23:30:26+00:00]             (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]               (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]             N)
+[2026-11-20T23:30:26+00:00]           χ
+[2026-11-20T23:30:26+00:00]           (@OfNat.ofNat.{0}
+[2026-11-20T23:30:26+00:00]             (@DirichletCharacter.{0} Complex
+[2026-11-20T23:30:26+00:00]               (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]                 (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]               N)
+[2026-11-20T23:30:26+00:00]             (nat_lit 1)
+[2026-11-20T23:30:26+00:00]             (@One.toOfNat1.{0}
+[2026-11-20T23:30:26+00:00]               (@DirichletCharacter.{0} Complex
+[2026-11-20T23:30:26+00:00]                 (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]                   (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]                 N)
+[2026-11-20T23:30:26+00:00]               (@MulChar.hasOne.{0, 0} (ZMod N) (@CommRing.toCommMonoid.{0} (ZMod N) (ZMod.commRing N)) Complex
+[2026-11-20T23:30:26+00:00]                 (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]                   (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))))))
+[2026-11-20T23:30:26+00:00]         (@Ne.{1} Complex s (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))) →
+[2026-11-20T23:30:26+00:00]       @Ne.{1} Complex (@DirichletCharacter.LFunction N inst χ s)
+[2026-11-20T23:30:26+00:00]         (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero))
+[2026-11-20T23:30:26+00:00] def DirichletLZerosOnLine : Prop :=
+[2026-11-20T23:30:26+00:00] ∀ (N : Nat) [inst : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) N]
+[2026-11-20T23:30:26+00:00]   (χ :
+[2026-11-20T23:30:26+00:00]     @DirichletCharacter.{0} Complex
+[2026-11-20T23:30:26+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]       N)
+[2026-11-20T23:30:26+00:00]   (s : Complex),
+[2026-11-20T23:30:26+00:00]   @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) s.re →
+[2026-11-20T23:30:26+00:00]     @LT.lt.{0} Real Real.instLT s.re (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+[2026-11-20T23:30:26+00:00]       @Eq.{1} Complex (@DirichletCharacter.LFunction N inst χ s)
+[2026-11-20T23:30:26+00:00]           (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T23:30:26+00:00]         @Eq.{1} Real s.re
+[2026-11-20T23:30:26+00:00]           (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T23:30:26+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T23:30:26+00:00]             (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T23:30:26+00:00]               (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T23:30:26+00:00] def PrimitiveDirichletLZerosOnLine : Prop :=
+[2026-11-20T23:30:26+00:00] ∀ (N : Nat) [inst : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) N]
+[2026-11-20T23:30:26+00:00]   (χ :
+[2026-11-20T23:30:26+00:00]     @DirichletCharacter.{0} Complex
+[2026-11-20T23:30:26+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]       N),
+[2026-11-20T23:30:26+00:00]   @DirichletCharacter.IsPrimitive.{0} Complex
+[2026-11-20T23:30:26+00:00]       (@CommGroupWithZero.toCommMonoidWithZero.{0} Complex
+[2026-11-20T23:30:26+00:00]         (@Semifield.toCommGroupWithZero.{0} Complex (@Field.toSemifield.{0} Complex Complex.instField)))
+[2026-11-20T23:30:26+00:00]       N χ →
+[2026-11-20T23:30:26+00:00]     ∀ (s : Complex),
+[2026-11-20T23:30:26+00:00]       @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) s.re →
+[2026-11-20T23:30:26+00:00]         @LT.lt.{0} Real Real.instLT s.re (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+[2026-11-20T23:30:26+00:00]           @Eq.{1} Complex (@DirichletCharacter.LFunction N inst χ s)
+[2026-11-20T23:30:26+00:00]               (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)) →
+[2026-11-20T23:30:26+00:00]             @Eq.{1} Real s.re
+[2026-11-20T23:30:26+00:00]               (@HDiv.hDiv.{0, 0, 0} Real Real Real
+[2026-11-20T23:30:26+00:00]                 (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+[2026-11-20T23:30:26+00:00]                 (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+[2026-11-20T23:30:26+00:00]                 (@OfNat.ofNat.{0} Real (nat_lit 2)
+[2026-11-20T23:30:26+00:00]                   (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast RiemannZetaZerosOnLine._proof_1)))
+[2026-11-20T23:30:26+00:00] riemannHypothesis : RiemannHypothesis
+[2026-11-20T23:30:26+00:00] riemannZeta_eq_zero_re : RiemannZetaZerosOnLine
+[2026-11-20T23:30:26+00:00] LFunction_ne_zero_of_half_lt_re : DirichletLNonvanishingRightOfHalf
+[2026-11-20T23:30:26+00:00] LFunction_eq_zero_re : DirichletLZerosOnLine
+[2026-11-20T23:30:26+00:00] LFunction_eq_zero_re_of_isPrimitive : PrimitiveDirichletLZerosOnLine
+[2026-11-20T23:30:26+00:00] 'riemannHypothesis' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T23:30:26+00:00] 'riemannZeta_eq_zero_re' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T23:30:26+00:00] 'LFunction_ne_zero_of_half_lt_re' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T23:30:26+00:00] 'LFunction_eq_zero_re' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T23:30:26+00:00] 'LFunction_eq_zero_re_of_isPrimitive' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+[2026-11-20T23:30:28+00:00] Command exited with code 0: /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean
+[2026-11-20T23:30:28+00:00] The five final theorems report only standard Lean axioms.
+[2026-11-20T23:30:28+00:00] Axiom audit passed. Replaying Main and all imported declarations in a fresh Lean kernel environment.
+[2026-11-20T23:30:28+00:00] $ /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env leanchecker --fresh --verbose Main
+[2026-11-20T23:31:18+00:00] Verification paused at user request; active verification service cgroups are frozen.
+[2026-11-20T23:40:20+00:00] Verification interrupted by a service stop.
+[2026-11-20T23:43:46+00:00] Keeping the completed theorem and axiom checks; checking source hashes. Kernel replay skipped at user request.
+[2026-11-20T23:45:15+00:00] Original-source integrity confirmed for all 175,187 Lean files.
+[2026-11-20T23:45:15+00:00] Compilation, final-theorem type and axiom checks, and source integrity checks passed. Kernel replay skipped at user request.</pre><div class="terminal-footer">Showing the latest 300 lines.<a href="/artifacts/verification.log.gz" download="">Full log (.gz)</a></div></article><aside><article class="environment"><p class="eyebrow">REPRODUCIBLE ENVIRONMENT</p><h2>Run details</h2><dl id="environment"><div><dt>Lean toolchain</dt><dd>leanprover/lean4:v4.33.1</dd></div><div><dt>mathlib revision</dt><dd>0df444a360eaa60ab8c11dca51a86af692955474</dd></div><div><dt>Compute</dt><dd>128 vCPU · 244 GiB</dd></div><div><dt>Operating system</dt><dd>Ubuntu 26.04.1 LTS</dd></div><div><dt>Build command</dt><dd>LEAN_NUM_THREADS=48 lake --no-ansi --keep-toolchain build</dd></div><div><dt>Lake tasks (dynamic total)</dt><dd>183,903 / 183,903 · 0 failed</dd></div><div><dt>Compilation duration</dt><dd>6h 58m 31s</dd></div><div><dt>Compilation finished</dt><dd><time datetime="2026-11-20T22:34:15+00:00" data-format="datetime">2026-11-20 22:34:15 UTC</time></dd></div><div><dt>Fresh kernel replay</dt><dd>Skipped at user request</dd></div></dl><div class="links"><a href="/artifacts/lean-toolchain" target="_blank">Pinned toolchain</a><a href="/artifacts/lake-manifest.json" target="_blank">Dependency manifest</a><a href="/artifacts/SHA256SUMS" target="_blank">Archive checksums</a><a href="/artifacts/source-inventory.json" target="_blank">Source inventory</a><a href="/artifacts/source-scan.json" target="_blank">Source scan</a></div></article>
+      <article class="interpretation" id="statement-check" aria-labelledby="statement-check-title">
+        <h2 id="statement-check-title">How the statement was checked</h2>
+        <p>The theorem stored in <code>Main.olean</code> has exactly mathlib’s <code>RiemannHypothesis</code> as its type, with no extra hypotheses.</p>
+        <p>Using only mathlib, we proved that this type is equivalent to saying that every zeta zero is either a negative even integer or has real part one half. Lean accepted the project’s theorem at that type.</p>
+        <ul class="statement-sources">
+          <li><a href="/artifacts/statement-audit/semantic-check.log">Statement check log</a></li>
+          <li><a href="/artifacts/statement-audit/RHStatementReference.lean">Equivalence proof in Lean</a></li>
+          <li><a href="/artifacts/statement-audit/statement-checks.zip" download="">Download the checks and run script (ZIP)</a></li>
+          <li><a href="https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf" target="_blank" rel="noopener">Clay’s official problem description</a></li>
+        </ul>
+      </article></aside></section>
+    <section class="download-panel"><div class="section-heading"><div><p class="eyebrow">PUBLISHED SOURCE MATERIAL</p><h2>14 parts. One archive.</h2></div><span class="muted">lean.tar.gz.part01–part14</span></div><div class="parts" id="parts"><div class="part complete" title="lean.tar.gz.part01
+SHA-256 86974b1c242ca7b6748f3299df4fc64ee0f6e06c776ac964fb64888101a3de77"><div class="part-top"><b>Part 01</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part02
+SHA-256 1c2a2477354a9dfa97ff1ce54861e96ed885bd456fffbaaabc2028314a229c42"><div class="part-top"><b>Part 02</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part03
+SHA-256 1465a23b1b579a881e24e5ffaf7c4c3727af28ea24741f1ec80e1d67947530a3"><div class="part-top"><b>Part 03</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part04
+SHA-256 3929e327eecb4e2c5c7cae30e104e6a4a52fa6b82d28325bcda8e9da1c86893b"><div class="part-top"><b>Part 04</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part05
+SHA-256 f25d7e80f7c4ad6d674aa18b323ca760f848857c8755501c149317c38a66c75d"><div class="part-top"><b>Part 05</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part06
+SHA-256 a8c651a68327811b37dce3cca8eda5e0b2102fa227c0d395cbb7553e4dd69939"><div class="part-top"><b>Part 06</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part07
+SHA-256 65c7e502a9b236a0f68d9e0aa6e089d4c09b9fc7a0960a149384063ccbe5e869"><div class="part-top"><b>Part 07</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part08
+SHA-256 71b027ad6e4179c3a50ce72921e3fec0a2dd751ec7472ac2c644ad145a50ec7e"><div class="part-top"><b>Part 08</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part09
+SHA-256 47718977ebaa8613f1647e93134479780db9320c5fa911463fd312a6257b796f"><div class="part-top"><b>Part 09</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part10
+SHA-256 1d85ece78e0779cec26b0cce29c6462d9f90180e56d78120b152df101715240b"><div class="part-top"><b>Part 10</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part11
+SHA-256 cf83a159d1a9540012229c376562587dd966da10cd657cbcef53acfd03232448"><div class="part-top"><b>Part 11</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part12
+SHA-256 1aa5415bd2db83b2689afeeb946419303b3c4f599ae790ad74d38465f768b502"><div class="part-top"><b>Part 12</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part13
+SHA-256 2de4edbce8ebdbfd0b94bc89bab518c7294209f408ec5b14a7be9e4832d9da81"><div class="part-top"><b>Part 13</b><span class="part-state">✓</span></div><small>17.2 MiB</small><div class="part-bar"></div></div><div class="part complete" title="lean.tar.gz.part14
+SHA-256 53f8ea43a9b5dcab97b84a52f3ac2848711c844a5420a4c56418093bacb3c6f6"><div class="part-top"><b>Part 14</b><span class="part-state">✓</span></div><small>5.0 MiB</small><div class="part-bar"></div></div></div><p class="caption">The announcement links to a split archive, not 14 individual Lean files. Parts are downloaded, hashed, reassembled in order, and extracted before compilation.</p><p class="hash" id="archive-hash">Combined archive SHA-256: 9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc</p></section>
+    <section class="findings-panel" id="findings-panel"><p class="eyebrow">EVIDENCE &amp; RESULTS</p><h2>Verification findings</h2><div id="result-links" class="links"><a href="/artifacts/source-integrity.json" target="_blank">Source integrity</a><a href="/artifacts/dependency-revisions.json" target="_blank">Dependency revisions</a><a href="/artifacts/dependency-cache.log" target="_blank">Dependency log</a><a href="/artifacts/build.log.gz" download="">Build log (.gz)</a><a href="/artifacts/axiom-audit.json" target="_blank">Axiom audit</a><a href="/artifacts/proof-audit.log" target="_blank">Proof audit log</a><a href="/artifacts/result.json" target="_blank">Result record</a><a href="/downloads.html">All downloads</a></div><div id="findings"><div class="finding"><strong>Published source acquired</strong><p>All 14 archive parts were downloaded and hashed. The archive contains 175,187 Lean files; the original source is preserved.</p></div><div class="finding"><strong>Main theorem identified</strong><p>Main.lean declares riemannHypothesis : RiemannHypothesis, using mathlib’s existing RiemannHypothesis definition. Four further theorems address zeta zeros and Dirichlet L-functions. Their proofs remain subject to compilation and axiom checks.</p></div><div class="finding"><strong>Source scan reviewed</strong><p>The lexical scan found no sorry, admit, axiom, unsafe, or native_decide tokens. Its five run_cmd matches only add names to Lean’s library-suggestion deny list. This preliminary source scan is not a kernel proof check.</p></div><div class="finding"><strong>Requested audit checks passed</strong><p>Compilation succeeded; the five final theorem types and their standard axiom dependencies were checked, and all original-source hashes match. Fresh kernel replay was skipped at user request. No fresh-kernel or independent-checker result is claimed.</p></div></div></section>
+    <section class="timeline-panel"><p class="eyebrow">RUN HISTORY</p><h2>Milestones</h2><ol id="timeline"><li><time datetime="2026-11-20T23:45:15+00:00" data-format="clock">23:45:15 UTC</time><span>Compilation, final-theorem type and axiom checks, and source integrity checks passed. Kernel replay skipped at user request.</span></li><li><time datetime="2026-11-20T23:45:15+00:00" data-format="clock">23:45:15 UTC</time><span>Original-source integrity confirmed for all 175,187 Lean files.</span></li><li><time datetime="2026-11-20T23:43:46+00:00" data-format="clock">23:43:46 UTC</time><span>Keeping the completed theorem and axiom checks; checking source hashes. Kernel replay skipped at user request.</span></li><li><time datetime="2026-11-20T23:40:20+00:00" data-format="clock">23:40:20 UTC</time><span>Verification interrupted by a service stop.</span></li><li><time datetime="2026-11-20T23:31:18+00:00" data-format="clock">23:31:18 UTC</time><span>Verification paused at user request; active verification service cgroups are frozen.</span></li><li><time datetime="2026-11-20T23:30:28+00:00" data-format="clock">23:30:28 UTC</time><span>$ /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env leanchecker --fresh --verbose Main</span></li><li><time datetime="2026-11-20T23:30:28+00:00" data-format="clock">23:30:28 UTC</time><span>Axiom audit passed. Replaying Main and all imported declarations in a fresh Lean kernel environment.</span></li><li><time datetime="2026-11-20T23:30:28+00:00" data-format="clock">23:30:28 UTC</time><span>The five final theorems report only standard Lean axioms.</span></li><li><time datetime="2026-11-20T23:30:28+00:00" data-format="clock">23:30:28 UTC</time><span>Command exited with code 0: /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean</span></li><li><time datetime="2026-11-20T23:29:51+00:00" data-format="clock">23:29:51 UTC</time><span>$ /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean</span></li><li><time datetime="2026-11-20T23:29:51+00:00" data-format="clock">23:29:51 UTC</time><span>Build passed. Checking the five final theorem types and their transitive axiom dependencies.</span></li><li><time datetime="2026-11-20T23:29:51+00:00" data-format="clock">23:29:51 UTC</time><span>Correcting an audit parser false positive: Classical.choice.{u} and Quot.sound.{u} are universe-qualified standard axioms. Compilation results and original Lean sources are unchanged.</span></li><li><time datetime="2026-11-20T22:34:52+00:00" data-format="clock">22:34:52 UTC</time><span>Compilation passed, but the theorem axiom audit requires review. No final verification claim is made.</span></li><li><time datetime="2026-11-20T22:34:52+00:00" data-format="clock">22:34:52 UTC</time><span>Command exited with code 0: /srv/rh-verify/tooling/lean-4.33.1-linux/bin/lake env lean --tstack=400000 --root=/srv/rh-verify/audit /srv/rh-verify/audit/ProofAudit.lean</span></li></ol></section>
   </main>
-</body>
-</html>
+  <footer><span>RH / VERIFY</span><div class="footer-notes"><p>Independent verification of the archive linked at <a href="https://alpo.ge/remark.pdf" target="_blank" rel="noopener">alpo.ge</a>. No endorsement or proof claim is implied. Event times are shown in your local timezone when available. Raw logs use UTC. <a href="https://lean-lang.org/doc/reference/latest/ValidatingProofs/" target="_blank" rel="noopener">Lean proof-validation guidance</a>.</p><p class="site-history">Original server <code>106.14.11.164</code> · <a href="https://web.archive.org/web/20261121052233/http://106.14.11.164/" target="_blank" rel="noopener noreferrer">Wayback Machine snapshot (21 Nov 2026, 05:22 UTC)</a></p></div><span id="run-date"><time datetime="2026-11-20T15:23:00+00:00" data-format="date">2026-11-20 UTC</time></span></footer>
 
+
+</body></html>

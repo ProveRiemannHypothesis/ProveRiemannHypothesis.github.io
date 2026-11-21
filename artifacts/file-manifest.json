@@ -1,0 +1,200 @@
+{
+  "original_site": "http://106.14.11.164/",
+  "wayback_snapshot": "https://web.archive.org/web/20261121052233/http://106.14.11.164/",
+  "storage_sampled_at": "2026-11-21T07:28:01+00:00",
+  "release_tag": "verification-2026-11-21",
+  "files": [
+    {
+      "path": "artifacts/ProofAudit.lean",
+      "bytes": 646,
+      "sha256": "4855735dcd98875d6edd8f89261e5484390eb626eaf0c9d4ac1ad5d83db06712",
+      "download_url": "/artifacts/ProofAudit.lean"
+    },
+    {
+      "path": "artifacts/SHA256SUMS",
+      "bytes": 1268,
+      "sha256": "330da856d74ed1d4e847d4f0338ef58172350f5a19c35bca2d5f06f4a2b63688",
+      "download_url": "/artifacts/SHA256SUMS"
+    },
+    {
+      "path": "artifacts/archive/machine-sample.json",
+      "bytes": 869,
+      "sha256": "960266bad4f3044e71d1188d252b7f114c8d9be2c11fd760161bbd1beea33618",
+      "download_url": "/artifacts/archive/machine-sample.json"
+    },
+    {
+      "path": "artifacts/archive/machine-sample.png",
+      "bytes": 46795,
+      "sha256": "40c303c255084ebba47dcd74c29c703cb3a9c93c4174a420f5fa571ee87769a5",
+      "download_url": "/artifacts/archive/machine-sample.png"
+    },
+    {
+      "path": "artifacts/archive/run-status.json",
+      "bytes": 57859,
+      "sha256": "ecb95ec574a421740cc35af4d915dd96292ade58f1b49437b9320b339f2ab916",
+      "download_url": "/artifacts/archive/run-status.json"
+    },
+    {
+      "path": "artifacts/axiom-audit-before-parser-fix.json",
+      "bytes": 422,
+      "sha256": "ca4cc68e928c885a9f0b41b79bfafee4dfc2aee0bbcf9ae6d4bcb8b20820f484",
+      "download_url": "/artifacts/axiom-audit-before-parser-fix.json"
+    },
+    {
+      "path": "artifacts/axiom-audit.json",
+      "bytes": 658,
+      "sha256": "b022c8bd9f0b40c7f7560bbf3c6cdf5fe7ae18f922a25ab68e67e259e659bf16",
+      "download_url": "/artifacts/axiom-audit.json"
+    },
+    {
+      "path": "artifacts/build.log",
+      "bytes": 177317454,
+      "sha256": "c16a2d827ff2a11a3973f1611c544492160cccce239923164b88512494fb3a58",
+      "download_url": "https://github.com/ProveRiemannHypothesis/ProveRiemannHypothesis.github.io/releases/download/verification-2026-11-21/build.log",
+      "gzip_url": "/artifacts/build.log.gz",
+      "gzip_bytes": 12690840,
+      "gzip_sha256": "e5b93df6d69558c36fb9a9f2a227860319809fb2544332ceec1874d437d0e5f3"
+    },
+    {
+      "path": "artifacts/compilation-result.json",
+      "bytes": 495,
+      "sha256": "cece994081a9e84f9f23924212b8b1f27a27ca3e800aebcf635a30ab7fc7046c",
+      "download_url": "/artifacts/compilation-result.json"
+    },
+    {
+      "path": "artifacts/dependency-cache.log",
+      "bytes": 37117,
+      "sha256": "09a76faa5156fdf3bf6e7b0e684ffb548a4558e18a6cff336046f8eafac4ec07",
+      "download_url": "/artifacts/dependency-cache.log"
+    },
+    {
+      "path": "artifacts/dependency-revisions.json",
+      "bytes": 1359,
+      "sha256": "6eed45e9aaef5aa04afbc0a6d1a09ac97d45be5a3d1de37df523610148614384",
+      "download_url": "/artifacts/dependency-revisions.json"
+    },
+    {
+      "path": "artifacts/kernel-replay.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "download_url": "/artifacts/kernel-replay.log"
+    },
+    {
+      "path": "artifacts/lake-manifest.json",
+      "bytes": 3221,
+      "sha256": "fee57ee9ed399d0a638ca955e5ad40a37a36eeb9b6dfd9f5964114fa7bbe4774",
+      "download_url": "/artifacts/lake-manifest.json"
+    },
+    {
+      "path": "artifacts/lakefile.toml",
+      "bytes": 1619,
+      "sha256": "b831ad8cac0babb7bf713433259bdfe5163e58c90734e86d71536d4e30ddec4c",
+      "download_url": "/artifacts/lakefile.toml"
+    },
+    {
+      "path": "artifacts/lean-toolchain",
+      "bytes": 25,
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "download_url": "/artifacts/lean-toolchain"
+    },
+    {
+      "path": "artifacts/proof-audit-before-parser-fix.log",
+      "bytes": 8145,
+      "sha256": "17b2e6e89bc9624e01cd2b1cb7c969ac1f414962ecee4b5f3f81aea13374ac44",
+      "download_url": "/artifacts/proof-audit-before-parser-fix.log"
+    },
+    {
+      "path": "artifacts/proof-audit.log",
+      "bytes": 16290,
+      "sha256": "d91e73c1f0256d6f77b0c9ecfd0174e28b4ad395db3300ab9e197b917efda71d",
+      "download_url": "/artifacts/proof-audit.log"
+    },
+    {
+      "path": "artifacts/remark.pdf",
+      "bytes": 245114,
+      "sha256": "3fc97784b71ddd44ff8aa0a177e99622a1c61b13cfa843a0989ee4a7a0cfeb8d",
+      "download_url": "/artifacts/remark.pdf"
+    },
+    {
+      "path": "artifacts/result-before-axiom-parser-fix.json",
+      "bytes": 23650,
+      "sha256": "aeb338973a19455fc033654483a864851688fb2ad46a1b274b09061cbaf9577d",
+      "download_url": "/artifacts/result-before-axiom-parser-fix.json"
+    },
+    {
+      "path": "artifacts/result-before-replay-omission.json",
+      "bytes": 24290,
+      "sha256": "9aa6e5767d2dff28b83a5f6da028f6703aeec9888078052608989cf39c853b14",
+      "download_url": "/artifacts/result-before-replay-omission.json"
+    },
+    {
+      "path": "artifacts/result.json",
+      "bytes": 25238,
+      "sha256": "f701aa189d7c93292c1934050ba8a7e8e047fee557c177b650b817a9de2ae71b",
+      "download_url": "/artifacts/result.json"
+    },
+    {
+      "path": "artifacts/source-integrity.json",
+      "bytes": 85,
+      "sha256": "3540db95e8575c019fd9fe0a311c505a1c469f393b5cfc91d918d0a4398d6de2",
+      "download_url": "/artifacts/source-integrity.json"
+    },
+    {
+      "path": "artifacts/source-inventory.json",
+      "bytes": 39218286,
+      "sha256": "87483128092fa1b2f9b788743e7a5215afe067c7163c7ce6c5a4ba156adfaedd",
+      "download_url": "/artifacts/source-inventory.json"
+    },
+    {
+      "path": "artifacts/source-scan.json",
+      "bytes": 917,
+      "sha256": "9dc152f0c91c5e5f2483c6dd14716197392449e88d4afe52927d8d9d7baf3068",
+      "download_url": "/artifacts/source-scan.json"
+    },
+    {
+      "path": "artifacts/statement-audit/RHStatementReference.lean",
+      "bytes": 1432,
+      "sha256": "81e63519d3c81b3a91abdee097a871bac01e415772ab7fc96f68be41d747e1bb",
+      "download_url": "/artifacts/statement-audit/RHStatementReference.lean"
+    },
+    {
+      "path": "artifacts/statement-audit/semantic-check.log",
+      "bytes": 1380,
+      "sha256": "fea4ba9f78042b00afac6fead6379a01f34a581026442e3b2258281fb46a257a",
+      "download_url": "/artifacts/statement-audit/semantic-check.log"
+    },
+    {
+      "path": "artifacts/statement-audit/statement-checks.zip",
+      "bytes": 4255,
+      "sha256": "05329095c5ec1afa4ce843aacf2e4f1546488bbfb44277eb41a77a94589c62f9",
+      "download_url": "/artifacts/statement-audit/statement-checks.zip"
+    },
+    {
+      "path": "artifacts/telemetry/compile-progress.json",
+      "bytes": 617,
+      "sha256": "2a5c18c72d4309403300ecd24bdfac3bdd03ce0423e8e63a88043cf9773a3480",
+      "download_url": "/artifacts/telemetry/compile-progress.json"
+    },
+    {
+      "path": "artifacts/telemetry/memory-peak.json",
+      "bytes": 353,
+      "sha256": "9759e3c3853ee5c6821af16c1adbec4e5542a162fc0bb026c60385ee454a869f",
+      "download_url": "/artifacts/telemetry/memory-peak.json"
+    },
+    {
+      "path": "artifacts/toolchain-checksum.txt",
+      "bytes": 286,
+      "sha256": "08b328e95355e156df4702f72289d12193ab85da9e5913a659fa4589eba84b31",
+      "download_url": "/artifacts/toolchain-checksum.txt"
+    },
+    {
+      "path": "artifacts/verification.log",
+      "bytes": 244650936,
+      "sha256": "e156faeeaaef3793239a25f5f6a4a4332e50fe2e06097489b775d5a65809e4f6",
+      "download_url": "https://github.com/ProveRiemannHypothesis/ProveRiemannHypothesis.github.io/releases/download/verification-2026-11-21/verification.log",
+      "gzip_url": "/artifacts/verification.log.gz",
+      "gzip_bytes": 15774671,
+      "gzip_sha256": "ce4fd602c0f47734514f2275ac930a7074a14930b32c6ad15a533cf8f19d7290"
+    }
+  ]
+}

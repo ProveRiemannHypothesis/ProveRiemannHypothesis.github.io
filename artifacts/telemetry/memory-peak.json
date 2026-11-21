@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "scope": "rh-verify-build.service",
+  "source": "Linux cgroup v2 memory.peak",
+  "includes_file_cache": true,
+  "peak_bytes": 225485783040,
+  "limit_bytes": 225485783040,
+  "first_recorded_at": "2026-11-20T16:34:44+00:00",
+  "peak_observed_at": "2026-11-20T16:34:44+00:00",
+  "last_recorded_at": "2026-11-20T16:34:44+00:00"
+}

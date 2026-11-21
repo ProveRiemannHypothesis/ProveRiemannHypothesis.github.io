@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "axioms": [
+    "Classical.choice.{u}",
+    "Quot.sound.{u}",
+    "propext"
+  ],
+  "nonstandard_axioms": [
+    "Classical.choice.{u}",
+    "Quot.sound.{u}"
+  ],
+  "theorems_reported": [
+    "riemannHypothesis",
+    "riemannZeta_eq_zero_re",
+    "LFunction_ne_zero_of_half_lt_re",
+    "LFunction_eq_zero_re",
+    "LFunction_eq_zero_re_of_isPrimitive"
+  ],
+  "checked_at": "2026-11-20T22:34:52+00:00"
+}

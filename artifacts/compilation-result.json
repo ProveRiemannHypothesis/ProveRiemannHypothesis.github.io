@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-20T15:35:44+00:00",
+  "finished_at": "2026-11-20T22:34:15+00:00",
+  "duration_seconds": 25111,
+  "exit_code": 0,
+  "lake_jobs": 183903,
+  "source_modules": 175187,
+  "warnings": 460321,
+  "command": "LEAN_NUM_THREADS=48 lake --no-ansi --keep-toolchain build",
+  "lean": "leanprover/lean4:v4.33.1",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "scope": "Compilation only; subsequent axiom auditing and kernel replay are separate."
+}

@@ -1,0 +1,17 @@
+{
+  "sampled_at": "2026-11-21T02:47:50+00:00",
+  "target_modules": 175187,
+  "compiled_modules": 175187,
+  "remaining_modules": 0,
+  "percent": 100.0,
+  "status": "complete",
+  "rate_window_seconds": null,
+  "modules_per_minute": null,
+  "overall_modules_per_minute": null,
+  "eta_seconds": 0,
+  "estimated_finish_at": null,
+  "basis": "Original project modules with .olean artifacts; dependency packages are excluded.",
+  "scope": "Compilation only; subsequent theorem, axiom, and integrity checks are excluded. Fresh kernel replay was omitted at user request.",
+  "scan_interval_seconds": 30,
+  "persisted": true
+}

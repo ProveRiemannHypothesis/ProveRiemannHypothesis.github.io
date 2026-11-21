@@ -1,0 +1,34 @@
+{
+  "status": "archived",
+  "sampled_at": "2026-11-20T16:15:14+00:00",
+  "interval_seconds": 2,
+  "source": "Dashboard telemetry recorded during the Lean compilation.",
+  "capture_image": "/artifacts/archive/machine-sample.png",
+  "cpu": {
+    "logical_cpus": 128,
+    "used_percent": 55.5,
+    "iowait_percent": 0.0,
+    "steal_percent": 0.0
+  },
+  "memory": {
+    "total_bytes": 261784838144,
+    "used_bytes": 38658519040,
+    "available_bytes": 223126319104,
+    "used_percent": 14.8,
+    "swap_total_bytes": 0,
+    "swap_used_bytes": 0
+  },
+  "storage": {
+    "mount": "/",
+    "total_bytes": 1081874485248,
+    "used_bytes": 152081305600,
+    "available_bytes": 885599121408,
+    "used_percent": 14.1
+  },
+  "disk_io": {
+    "read_bytes_per_second": 0,
+    "write_bytes_per_second": 468737
+  },
+  "load_average": [59.03, 58.94, 55.94],
+  "uptime_seconds": 4029
+}

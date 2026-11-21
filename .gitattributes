@@ -1,0 +1,6 @@
+/artifacts/** -text
+/api/* -text
+*.gz binary
+*.zip binary
+*.png binary
+*.pdf binary
